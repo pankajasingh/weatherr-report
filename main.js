@@ -26,12 +26,13 @@ function displayLocationResult(result){
     let div = document.querySelector("#result");
     //test
     console.log(result);
+
      if(result.message){
          div.innerHTML = "";
          msgDiv.innerHTML = `<div class="alert alert-danger alert-dismissible" role="alert">\
+                             <strong>oops!</strong>${result.messsage}\
                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">\
                              <span aria-hidden="true">&times;</span>\
-                             <strong>oops!</strong>${result.messsage}\
                              </button>\</div>`;
      }
      else{
@@ -39,7 +40,7 @@ function displayLocationResult(result){
         msgDiv.innerHTML = `<div class="alert alert-danger alert-dismissible" role="alert">\
                               <button type="button" class="close" data-dismiss="alert" aria-label="Close">\
                               <span aria-hidden="true">&times;</span>\
-                              <strong>Weather of</strong><h3 style="text-shadow:  2px 2px 5px red";${getlocation}\
+                              <strong style="text-align:center";>Weather of</strong><h3>${getlocation}</h3>\
                               </button>\</div>`;
         div.innerHTML = "";
         const weather = result.consolidated_weather;
