@@ -48,7 +48,7 @@ function displayLocationResult(result){
         for(let i = 0;i<weather.length;i++){
             console.log(weather[i].weather_state_name);
             var elements = `<div>${weather[i]}`;
-            var getdata = <div class="row">
+            var getdata =` <div class="row">
                               <div class="col-sm-6 col-md-4">
                                  <div class="thumbnail">
                                      <img src="..." alt="...">
@@ -58,7 +58,7 @@ function displayLocationResult(result){
                                       </div>
                                   </div>
                               </div>
-                         </div>
+                         </div>`
         }
      }
     
