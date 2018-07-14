@@ -19,13 +19,13 @@ function checkweather()
             console.log(error.message);
         });
     }
-}   
+ }   
     
 function displayLocationResult(result){
     let msgDiv = document.querySelector("#message");
     let div = document.querySelector("#result");
     //test
-    console.log(result.message);
+    console.log(result);
      if(result.message){
          div.innerHTML = "";
          msgDiv.innerHTML = `<div class="alert alert-danger alert-dismissible" role="alert">\
