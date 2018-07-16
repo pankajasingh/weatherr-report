@@ -2,7 +2,7 @@ var getlocation = "";
 function checkweather()
  {
     var location = document.querySelector("#cityname").value;
-    if(location==null){
+    if(location==""){
         alert("Please enter a valid location");
     }
     else{
@@ -37,10 +37,10 @@ function displayLocationResult(result){
      }
      else{
 
-        msgDiv.innerHTML = `<div class="alert alert-danger alert-dismissible" role="alert">\
+        msgDiv.innerHTML =   `<div class="alert alert-danger alert-dismissible" role="alert">\
+                              <h3 style="text-align:center";>Weather of ${getlocation}</h3>\
                               <button type="button" class="close" data-dismiss="alert" aria-label="Close">\
                               <span aria-hidden="true">&times;</span>\
-                              <strong style="text-align:center";>Weather of</strong><h3>${getlocation}</h3>\
                               </button>\</div>`;
         div.innerHTML = "";
         const weather = result.consolidated_weather;

@@ -12,12 +12,12 @@ body{
 .headingspan{
     color:red;
     font-family: jokerman;
-}
+    }
 .container {
     position: relative; 
     width:50%;
     margin: 0 auto; /* Center it */
-}
+    }
 
  .content {
     position: absolute; /* Position the background text */
@@ -27,13 +27,12 @@ body{
     width: 100%; /* Full width */
     padding: 20px; /* Some padding */
     text-shadow:  2px 2px 5px red;
-    
-
-}
+    }
 
 .form-control{
     height: 4em;
-}
+    }
+     
 .btn{
     height:4em;
     
@@ -43,4 +42,10 @@ body{
 .btn:hover {
     background-color: black;
     color: white;
+   }
+
+.alert{
+    background-color: black;
+    width:75%;
+    margin-left: 10em;
 }
