@@ -30,18 +30,16 @@ function displayLocationResult(result){
      if(result.message){
          div.innerHTML = "";
          msgDiv.innerHTML = `<div class="alert alert-danger alert-dismissible" role="alert">\
-                             <strong>oops!</strong>${result.messsage}\
+                             <strong>oops!</strong> ${result.messsage}\
                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">\
                              <span aria-hidden="true">&times;</span>\
                              </button>\</div>`;
      }
      else{
 
-        msgDiv.innerHTML =   `<div class="alert alert-danger alert-dismissible" role="alert">\
+        msgDiv.innerHTML =   `<div class="well">\
                               <h3 style="text-align:center";>Weather of ${getlocation}</h3>\
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">\
-                              <span aria-hidden="true">&times;</span>\
-                              </button>\</div>`;
+                              </div>`;
         div.innerHTML = "";
         const weather = result.consolidated_weather;
         console.log(weather);
@@ -49,18 +47,20 @@ function displayLocationResult(result){
         for(let i = 0;i<weather.length;i++){
             console.log(weather[i].weather_state_name);
             var elements = `<div>${weather[i]}`;
-            var getdata =` <div class="row">
-                              <div class="col-sm-6 col-md-4">
+            var getdata =` <div class="row"  id="id_${i}">
+                              <div class="col-sm-6 col-md-4" "col-lg-4">
                                  <div class="thumbnail">
-                                     <img src="..." alt="...">
+                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpViQNwCjh3h0EuLZw61x5wfjUl8hprUodTZJul7vk6KCzfL1" alt="sun-image">
                                      <div class="caption">
-                                        <h3>Thumbnail label</h3>
-                                        <p>...</p>
+                                        <h3>Date:<h5> ${weather[i].applicable_date}</h5></h3>
+                                        <p><h3>Minimum Temperature<h5> ${weather[i].min_temp}</h3></h5></p>
                                       </div>
                                   </div>
                               </div>
                          </div>`
+            $("#result").append(getdata);
         }
+        
      }
     
 
