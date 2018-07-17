@@ -54,7 +54,10 @@ function displayLocationResult(result){
                                      <img class="thumbnail-img" src="https://www.metaweather.com/static/img/weather/ico/${weather[i].weather_state_abbr}.ico" alt="sun-image">
                                      
                                         <h3>Date:<h5> ${weather[i].applicable_date}</h5></h3>
-                                        <p><h3>Minimum Temperature<h5> ${weather[i].min_temp}</h3></h5></p>
+                                        <p><h3>Minimum Temperature<h5> ${weather[i].min_temp} &deg;C</h3></h5>
+                                        <h3>Current Temperature<h5> ${weather[i].the_temp} &deg;C</h3></h5>
+                                        <h3>Maximum Temperature<h5> ${weather[i].max_temp} &deg;C</h3></h5>
+                                        <h3>Wind Speed<h5> ${weather[i].wind_speed} </h3></h5></p>
                                        
                                         </div>
                                     </center>  
