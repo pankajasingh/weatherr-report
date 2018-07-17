@@ -37,26 +37,29 @@ function displayLocationResult(result){
      }
      else{
 
-        msgDiv.innerHTML =   `<div class="well">\
-                              <h3 style="text-align:center";>Weather of ${getlocation}</h3>\
+        msgDiv.innerHTML =   `<div class="well" >\
+                              <h3 style="text-align:center">Weather of ${getlocation}</h3>\
                               </div>`;
         div.innerHTML = "";
         const weather = result.consolidated_weather;
         console.log(weather);
         
         for(let i = 0;i<weather.length;i++){
-            console.log(weather[i].weather_state_name);
+            console.log(weather[i].weather_state_abbr);
             var elements = `<div>${weather[i]}`;
-            var getdata =` <div class="row"  id="id_${i}">
-                              <div class="col-sm-6 col-md-4" "col-lg-4">
-                                 <div class="thumbnail">
-                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpViQNwCjh3h0EuLZw61x5wfjUl8hprUodTZJul7vk6KCzfL1" alt="sun-image">
-                                     <div class="caption">
+            var getdata =` 
+                              <div class="col-lg-4">
+                                 <center>
+                                      <div class="thumbnail">
+                                     <img class="thumbnail-img" src="https://www.metaweather.com/static/img/weather/ico/${weather[i].weather_state_abbr}.ico" alt="sun-image">
+                                     
                                         <h3>Date:<h5> ${weather[i].applicable_date}</h5></h3>
                                         <p><h3>Minimum Temperature<h5> ${weather[i].min_temp}</h3></h5></p>
-                                      </div>
+                                       
+                                        </div>
+                                    </center>  
                                   </div>
-                              </div>
+                              
                          </div>`
             $("#result").append(getdata);
         }
@@ -67,5 +70,3 @@ function displayLocationResult(result){
     
     
 }
-
-    

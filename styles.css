@@ -1,51 +1,87 @@
-body{
+body {
     background-color: maroon;
-}
-.navbar{
+  }
+  .navbar {
     background-color: rgb(240, 255, 246);
-    
-}
-.navbar-brand{
+  }
+  .navbar-brand {
     color: black;
     font-family: arial;
-}
-.headingspan{
-    color:red;
+  }
+  .headingspan {
+    color: red;
     font-family: jokerman;
-    }
-.container {
-    position: relative; 
-    width:50%;
-    margin: 0 auto; /* Center it */
-    }
-
- .content {
-    position: absolute; /* Position the background text */
-    top: 0; 
+  }
+  .margin-class {
+    margin-top: 120px !important;
+  }
+  .container1 {
+    background-image: url("http://transsmisja.com/wp-content/uploads/2015/06/tapety_HD_icelands_ring_road_droga-krajowa-islandia.jpg");
+    height: 200%;
+  
+    padding-bottom: 180px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    margin: auto; /* Center it */
+  }
+  
+  .content {
     background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
     color: #f1f1f1; /* Grey text */
-    width: 100%; /* Full width */
+    /* Full width */
     padding: 20px; /* Some padding */
-    text-shadow:  2px 2px 5px red;
-    }
-
-.form-control{
+    text-shadow: 2px 2px 5px red;
+  }
+  
+  .mt-2 {
+       margin-top: 2px;
+  }
+  .form-control {
+  
     height: 4em;
-    }
-     
-.btn{
-    height:4em;
-    
-    color:black;
-   }
-
-.btn:hover {
+  }
+  
+  .btn {
+    height: 4em;
+  
+    color: black;
+  }
+  
+  .btn:hover {
     background-color: black;
     color: white;
-   }
-
-.alert{
+  }
+  
+  .alert {
     background-color: black;
-    width:75%;
+    width: 75%;
     margin-left: 10em;
-}
+  }
+   .thumbnail-img {
+      text-align:center;
+      height: 50px;
+      width:50px;
+  
+   }
+   .col-lg-4{
+  
+      padding:2px;
+      margin-top: 1px;
+     
+     
+   }
+   .thumbnail{
+      background-color:rgba(0,0,0,.6);
+      border:none;
+       color:white !important;
+   }
+   .well{
+      background-color:rgba(0,0,0,.6);
+      border:none;
+      color:white !important;
+      margin-top:3px;
+     
+   }
